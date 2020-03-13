@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Lista</title>
+<link rel="stylesheet" type="text/css" href="/css/estilos.css">
+</head>
+<body>
+
+	<h1>Crud de Paradas</h1>
+
+	<table id="paradas">
+
+		<tr>
+			<th>Denominacion</th>
+			<th>Fecha</th>
+		</tr>
+		<tr th:each="parada: ${listaParada}">
+
+			<td th:text="${parada.denominacion}" />
+			<td th:text="${parada.fecha}" />
+
+			<td><a th:href="@{eliminaParada(idparada=${parada.idparada})}">Eliminar </a></td>
+		</tr>
+
+	</table>
+	
+	<a href="/parada/formInsertaParada"> Inserta Parada </a>
+
+	<p><a href="/"> Volver </a></p> 
+	
+</body>
+</html>

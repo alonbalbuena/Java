@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Consultar alumnos por nombre</h1>
+	
+	<table>
+		<tr>
+			<td>idalumno</td>
+			<td>nombre</td>
+		</tr>
+		<tr th:each="alumno: ${listaAlumnos}">
+			<td th:text="${alumno.idalumno}"></td>
+			<td th:text="${alumno.nombre}"></td>
+		</tr>
+	</table>
+	
+	<form th:action="@{/consultarAlumnos}">
+
+		nombre: <input type="date" name="nombre"> 
+		<input type="submit" value="consultar">
+	</form>
+</body>
+</html>

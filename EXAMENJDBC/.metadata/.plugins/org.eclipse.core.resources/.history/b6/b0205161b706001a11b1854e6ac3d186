@@ -1,0 +1,9 @@
+package util;
+
+public class MySQLFactory {
+
+	//es un atributo privado
+	private Connection conexion;
+	//mientras que dao es publico pues vamos a aplicar el patron singleton
+	public static MySQLFactory dao;
+}

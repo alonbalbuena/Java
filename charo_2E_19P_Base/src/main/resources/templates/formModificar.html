@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1" />
+<title>Document</title>
+</head>
+<body>
+	<form th:action="@{/modificar}">
+		<select name="finca">
+			<option th:each="finca :${listaFincas}" th:value="${finca.idfinca}"
+				th:text="${finca.denominacion}"/>
+		</select>
+		fila:<input name="fila" type="text"/>
+		columna:<input name="columna" type="text"/>
+		<input type="submit" value="Modificar" />
+	</form>
+</body>
+</html>

@@ -1,0 +1,18 @@
+package util;
+
+import java.sql.Connection;
+
+public class MySQLFactory {
+
+	//es un atributo privado
+	private Connection conexion;
+	//mientras que dao es publico pues vamos a aplicar el patron singleton
+	public static MySQLFactory dao;
+	
+	//este constructor solo se usara dentro del ambito de la clase
+	private MySQLFactory(Connection conexion) {
+		this.conexion = conexion;
+	}
+	
+	
+}

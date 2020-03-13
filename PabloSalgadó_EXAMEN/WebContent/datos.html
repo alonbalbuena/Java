@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Formulario</title>
+</head>
+
+
+<body>
+
+<form action="/Proceso">
+<h1>Formulario WEB basico</h1>
+<fieldset>
+<legend>Informacion del usuario</legend>
+
+<p>Nombre:
+<input type="text" name="nombre" placeholder="Nombre de usuario...">
+</p>
+
+<p>Direccion e-mail:
+<input type="text" name="email" ></p>
+
+
+<p>Ciudad:
+<select placeholder="Seleccione una ciudad">
+<option selected disabled label="Selecciona una ciudad..."> </option>
+<option value="Oviedo" label="Oviedo"></option>
+<option value="Gijon" label="Gijon"></option>
+<option value="Aviles" label="Aviles"></option>
+</select>
+</p>
+
+
+<p>Aficiones:
+<label><input type="checkbox">Deportes</label><br>
+<label><input type="checkbox">Coches</label><br>
+<label><input type="checkbox">Musica</label><br>
+</p>
+
+<p>Sexo:
+<label><input type="radio">Masculino</label><br>
+<label><input type="radio" >Femenino</label><br>
+</p>
+</fieldset>
+
+<input type="submit" value="enviar">
+</form>
+
+</body>
+</html>

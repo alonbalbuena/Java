@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Matriculas</h1>
+	<table>
+		<tr>
+			<td>fecha</td>
+			<td>alumno</td>
+			<td>curso</td>
+		</tr>
+		<tr th:each="matricula: ${listaMatriculas}">
+			<td th:value="${matricula.fecha}"></td>
+			<td th:value="${matricula.alumno.nombre}"></td>
+			<td th:value="${matricula.cursos.denominacion}"></td>
+		</tr>
+	</table>
+	<h1>Borrar alumnos matriculados en cursos</h1>
+	<form th:action="@{/desmatricularAlumnos}">
+		fechaInicial<input type="text" th:text="${fechaInicial}">
+		fechaFinal<input type="text" th:text="${fechaFinal}"> 
+		<input type="submit" value="borrar">
+	</form>
+</body>
+</html>

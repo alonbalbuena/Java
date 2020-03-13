@@ -1,0 +1,76 @@
+package com.dawes.DAOImpl;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.Set;
+
+import com.dawes.DAO.RecetaIngredientesDAO;
+import com.dawes.modelo.IngredientesVO;
+import com.dawes.modelo.RecetaIngredientesVO;
+import com.dawes.modelo.RecetaVO;
+import com.dawes.serviciosImpl.ServicioIngredientesImpl;
+import com.dawes.serviciosImpl.ServicioRecetaImpl;
+
+public class RecetaIngredientesDAOImpl implements RecetaIngredientesDAO {
+
+	private ResultSet rs;
+	private PreparedStatement ps;
+
+	// cada vez que hagamos una conexion/administracion de esta tabla llamaremos a
+	// este constructor
+	private Connection conexion;
+
+	public RecetaIngredientesDAOImpl(Connection conexion) {
+		this.conexion = conexion;
+	}
+
+	public int insertar(RecetaIngredientesVO relacionSinId,IngredientesVO ingredienteConID,RecetaVO recetaConId) {
+		try {
+			ps = conexion.prepareStatement(
+					"INSERT INTO recetaingredientes(cantidad,idreceta,idingrediente)" + " VALUES (?,?,?) ");
+
+			ps.setInt(1, relacionSinId.getCantidad());
+			
+			// para introducir los id, debemos de pasarlos por parametros
+			ps.setInt(2,ingrediente.getIdingredientes() );
+			ps.setInt(3,servicioIngrediente.getIdin);
+			
+			ps.executeUpdate();
+			return 1;
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return 0;
+		}
+	}
+
+	public int borrar(int idRecetaIngredientes) {
+		try {
+			ps = conexion.prepareStatement("DELETE FROM recetaingredientes WHERE idrecetaingredientes = ?");
+			ps.setInt(1, idRecetaIngredientes);
+			ps.executeUpdate();
+			return 1;
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return 0;
+		}
+		
+	}
+
+	public int modificar(RecetaIngredientesVO relacionConId) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public RecetaIngredientesVO leerIgual(int idRecetaIngrediente) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Set<RecetaIngredientesVO> leerTodo() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

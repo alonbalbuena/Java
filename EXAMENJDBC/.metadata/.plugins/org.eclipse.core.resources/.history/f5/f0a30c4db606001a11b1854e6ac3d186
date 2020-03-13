@@ -1,0 +1,11 @@
+package com.dawes.modelo;
+
+public class recetaIngredientesVO {
+	
+	private int idrecetaingredientes;
+	private int cantidad;
+	private recetaVO idreceta;
+	private ingredientesVO idingrediente;
+	
+
+}

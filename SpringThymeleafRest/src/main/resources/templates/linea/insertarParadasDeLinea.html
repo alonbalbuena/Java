@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="/css/estilos.css">
+</head>
+<body>
+<h1>Asignar Parada Línea: </h1>
+	<form th:action="@{/linea/asignarParada}" th:object="${lineaparada}" method="Post">
+		<p>Marquesina: <input type="text" th:field="*{marquesina}"/></p>
+		<p>Parada:
+			<select th:field="*{parada.idparada}">
+				<option th:each="p : ${allparadas}" th:value="${p.idparada}" th:text="${p.denominacion}"></option>
+			</select>
+		</p>
+		<input type="hidden" th:field="${linea.idlinea}" name="idlinea" />
+		<input type="submit" value="persiste" />
+	</form>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="/css/estilos.css">
+
+<title>Paradas de Linea</title>
+</head>
+<body>
+
+	 <h1>Linea: <a th:text="${linea.denlarga}"></a> </h1>
+
+	<table>
+	
+	<tr>
+		<th>Marquesina</th>
+		<th>Denominacion</th>
+		<th>Fecha</th>
+		<th>Accion</th>
+	</tr>
+	
+	<tr th:each="lp: ${linea.paradas}">
+	
+		<td th:text="${lp.marquesina}"/>
+		<td th:text="${lp.parada.denominacion}"/>
+		<td th:text="${lp.parada.fecha}"/>
+		
+		<td><a th:href="@{/linea/eliminarParadaEnLinea(idlineaparada=${lp.idlineaparada},idlinea=${linea.idlinea})}">Eliminar </a></td>
+	</tr>
+	
+	
+	</table>
+	<p><a th:href="@{/linea/insertarParadaEnLinea(idlinea=${linea.idlinea})}">Insertar parada</a>
+	
+	<a href="/linea/listaLinea"> CRUD de lineas </a>
+	<a href="/"> Inicio </a>
+
+</body>
+</html>

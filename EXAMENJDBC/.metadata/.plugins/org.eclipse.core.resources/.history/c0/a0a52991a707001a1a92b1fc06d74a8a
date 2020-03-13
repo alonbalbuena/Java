@@ -1,0 +1,23 @@
+package com.dawes.DAOImpl;
+
+import static org.junit.Assert.*;
+
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+import com.dawes.serviciosImpl.ServicioRecetaImpl;
+
+public class TestReceta {
+	
+	ServicioRecetaImpl servicioReceta;
+
+	@BeforeClass
+	public static void setUpBeforeClass() throws Exception {
+	}
+
+	@Test
+	public void testInsertar() {
+		fail("Not yet implemented");
+	}
+
+}

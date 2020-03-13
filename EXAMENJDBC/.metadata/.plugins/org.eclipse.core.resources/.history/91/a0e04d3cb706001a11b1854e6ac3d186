@@ -1,0 +1,9 @@
+package util;
+
+public class MySQLFactory {
+
+	public static dao;
+	
+	private Connection conexion;
+	
+}

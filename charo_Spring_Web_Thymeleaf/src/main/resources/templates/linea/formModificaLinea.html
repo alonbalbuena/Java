@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Formulario</title>
+<link rel="stylesheet" type="text/css" href="/css/estilos.css">
+</head>
+<body>
+
+	<form th:object="${linea}" th:action="@{/linea/guardaLinea}" method="POST">
+		
+		<p>
+			DenCorta: <input type="text" th:field="*{dencorta}" />		
+		</p>
+		<p>
+			DenLarga: <input type="text" th:field="*{denlarga}" />		
+		</p>
+		<p>
+			Fecha: <input type="text" th:field="*{fecha}" />		
+		</p>
+		
+		<input type="hidden" th:field="*{idlinea}" />
+
+		<p>
+			<input type="submit" value="Modificar" />
+		</p>
+	
+	</form>
+
+</body>
+</html>

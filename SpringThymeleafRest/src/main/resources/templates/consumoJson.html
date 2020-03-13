@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- PETICION REST PASADO COMO UN ATRIBUTO -->
+<p th:each="linea: ${lista}">
+	<span th:text="${linea.dencorta}"></span>
+</p>
+</body>
+</html>

@@ -1,0 +1,27 @@
+package util;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class MySQLFactory {
+
+	//es un atributo privado
+	private Connection conexion;
+	//mientras que dao es publico pues vamos a aplicar el patron singleton
+	public static MySQLFactory dao;
+	
+	main
+	
+	
+	//este constructor solo se usara dentro del ambito de la clase
+	private MySQLFactory() {
+		try {
+			conexion = DriverManager.getConnection("jdbc:mysql://localhost/examenjdbc?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC");
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <style>
+  
+  body{
+  font-family:Arial;
+  }
+  
+  </style>
+  <body>
+  <h1>Formulario WEB basico</h1>
+    <form action="Proceso" method="post">
+      <fieldset>
+        <legend>Informacion del usuario</legend>
+        Nombre: <input type="text" name="nombre" /> <br /><br/>
+        Direccion e-mail:<input type="text" name="email" /><br /><br/>
+        Ciudad:
+        <select name="ciudad">
+          <option value="gijon">Gijon</option>
+          <option value="oviedo">Oviedo</option>
+          <option value="aviles">Aviles</option> </select
+        ><br /><br/>
+        Aficiones: <br />
+        <input type="checkbox" name="Deportes" value="deportes"/>Deportes<br />
+        <input type="checkbox" name="Coches" value="coches"/>Coches<br />
+        <input type="checkbox" name="Musica" value="musica"/>Musica<br />
+        <br />
+        Sexo: <br />
+        <input type="radio" name="Sexo" value="Masculino" />Masculino<br />
+        <input type="radio" name="Sexo" value="Femenino" />Femenino<br /><br/>
+        
+        <input type="submit" value="ENVIAR"/><br/>
+      </fieldset>
+    </form>
+  </body>
+</html>

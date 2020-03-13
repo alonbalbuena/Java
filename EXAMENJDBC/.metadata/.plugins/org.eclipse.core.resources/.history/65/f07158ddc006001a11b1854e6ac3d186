@@ -1,0 +1,52 @@
+package com.dawes.DAOImpl;
+
+import static org.junit.Assert.*;
+
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+import com.dawes.modelo.IngredientesVO;
+import com.dawes.modelo.RecetaIngredientesVO;
+import com.dawes.serviciosImpl.ServicioIngredientesImpl;
+import com.dawes.serviciosImpl.ServicioRecetaIngredientes;
+
+public class TestRecetaIngredienteDAOImpl {
+
+	private static RecetaIngredientesVO ingredientePrueba;
+	private static ServicioRecetaIngredientes servicioIngredientes;
+
+	@BeforeClass
+	public static void setUpBeforeClass() throws Exception {
+		// creamos la conexion
+		servicioIngredientes = new ServicioIngredientesImpl();
+
+		// creamos un ingrediente de prueba para insertar
+		ingredientePrueba = new IngredientesVO("test", "proteina", null);
+	}
+
+	@Test
+	public void testInsertar() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testBorrar() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testModificar() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testLeerIgual() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testLeerTodo() {
+		fail("Not yet implemented");
+	}
+
+}

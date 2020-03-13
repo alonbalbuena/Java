@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="ISO-8859-1" />
+    <title>Insert title here</title>
+  </head>
+  <body>
+    <h1>Dada una marquesina y una parada conocer las lineas</h1>
+    <form th:action="@{/consultas/1}">
+      <input type="text" name="marquesina" />
+      <input type="text" name="parada" />
+      <input type="submit" value="ENVIAR" />
+    </form>
+    <h1>Lineas que pasan por una parada</h1>
+    <h1>Cuantas paradas tiene una linea</h1>
+  </body>
+</html>

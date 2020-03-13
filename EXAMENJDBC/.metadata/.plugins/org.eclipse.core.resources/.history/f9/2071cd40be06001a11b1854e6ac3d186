@@ -1,0 +1,45 @@
+package com.dawes.serviciosImpl;
+
+import java.util.Set;
+
+import com.dawes.DAOImpl.RecetaIngredientesDAOImpl;
+import com.dawes.modelo.RecetaIngredientesVO;
+import com.dawes.servicios.ServicioRecetaIngrediente;
+import com.dawes.util.MySQLFactory;
+
+public class ServicioRecetaIngredientes implements ServicioRecetaIngrediente {
+
+	// cada vez que hagamos una administracion de esta tabla solo llamaremos al
+	// singleton
+	// con este constructor
+	private RecetaIngredientesDAOImpl ri;
+	public ServicioRecetaIngredientes() {
+		ri = MySQLFactory.getDAO().getRecetaIngredientes();
+	}
+
+	public int insertarRelacion(RecetaIngredientesVO relacionSinId) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public int borrarRelacion(int idRecetaIngredientes) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public int modificarRelacion(RecetaIngredientesVO relacionConId) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public RecetaIngredientesVO mostrarRelacion(int idRecetaIngrediente) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Set<RecetaIngredientesVO> mostrarTodo() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

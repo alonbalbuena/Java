@@ -1,0 +1,5 @@
+package com.dawes.servicios;
+
+public interface servicioIngredientes {
+
+}

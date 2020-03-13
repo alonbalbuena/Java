@@ -1,0 +1,15 @@
+package DAO;
+
+import java.util.Set;
+
+import com.dawes.modelo.ingredientesVO;
+
+public interface IngredientesDAO {
+	int insertar();
+	int borrar();
+	int borrar();
+	int modificar(ingredientesVO ingrediente);
+	ingredientesVO leerIgual(int idIngrediente);
+	ingredientesVO leerIgual();
+	Set< ingredientesVO> leerIgual();
+}

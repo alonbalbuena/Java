@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Lista</title>
+<link rel="stylesheet" type="text/css" href="/css/estilos.css">
+</head>
+<body>
+
+	<h1>Crud Lineas</h1>
+
+	<table id="lineas">
+
+		<tr>
+			<th>Dencorta</th>
+			<th>Denlarga</th>
+			<th>Fecha</th>
+			<th colspan="3">Accion</th>
+		</tr>
+		<tr th:each="linea: ${listaLinea}">
+
+			<td th:text="${linea.dencorta}" />
+			<td th:text="${linea.denlarga}" />
+			<td th:text="${linea.fecha}" />
+
+			<td><a th:href="@{eliminaLinea(idlinea=${linea.idlinea})}">Eliminar
+			</a></td>
+			<td><a th:href="@{modificaLinea(idlinea=${linea.idlinea})}">Modificar</a></td>
+			<td><a th:href="@{verParada(idlinea=${linea.idlinea})}">ver
+					Paradas</a></td>
+
+		</tr>
+
+	</table>
+
+	<br>
+	<br>
+
+	<a href="/linea/formInsertaLinea"> Inserta linea </a>
+
+	<p>
+		<a href="/"> Inicio </a>
+	</p>
+
+
+</body>
+</html>
