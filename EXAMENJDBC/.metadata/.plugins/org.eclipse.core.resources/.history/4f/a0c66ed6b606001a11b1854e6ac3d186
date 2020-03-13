@@ -1,8 +1,0 @@
-package com.dawes.modelo;
-
-public class recetaVO {
-	
-	private int idReceta;
-	
-
-}

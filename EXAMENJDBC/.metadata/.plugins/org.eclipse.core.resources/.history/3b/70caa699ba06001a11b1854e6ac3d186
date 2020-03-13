@@ -1,7 +1,0 @@
-package DAO;
-
-import com.dawes.modelo.recetaIngredientesVO;
-
-public interface RecetaIngredientesDAO {
-	int insertar(recetaIngredientesVO relacionSinId)
-}

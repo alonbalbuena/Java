@@ -1,9 +1,0 @@
-package com.dawes.modelo;
-
-public class ingredientesVO {
-
-	private int idingredientes;
-	private String nombre;
-	private String tipo;
-	
-}

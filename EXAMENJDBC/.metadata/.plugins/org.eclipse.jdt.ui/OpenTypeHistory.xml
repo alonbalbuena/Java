@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<typeInfoHistroy>
-<typeInfo handle="=alonso_EXAMENJDBC/src\/main\/java&lt;com.dawes.servicios{ServicioReceta.java[ServicioReceta" modifiers="513" timestamp="1573721736831"/>
-<typeInfo handle="=alonso_EXAMENJDBC/src\/main\/java&lt;com.dawes.servicios{ServicioRecetaIngrediente.java[ServicioRecetaIngrediente" modifiers="513" timestamp="1573822084180"/>
-<typeInfo handle="=alonso_EXAMENJDBC/src\/main\/java&lt;com.dawes.servicios{ServicioIngredientes.java[ServicioIngredientes" modifiers="513" timestamp="1573721745949"/>
-<typeInfo handle="=alonso_EXAMENJDBC/src\/main\/java&lt;com.dawes.DAOImpl{IngredientesDAOImpl.java[IngredientesDAOImpl" modifiers="1" timestamp="1573820225038"/>
-<typeInfo handle="=alonso_EXAMENJDBC/src\/main\/java&lt;com.dawes.DAOImpl{RecetaIngredientesDAOImpl.java[RecetaIngredientesDAOImpl" modifiers="1" timestamp="1573822003179"/>
-<typeInfo handle="=alonso_EXAMENJDBC/src\/main\/java&lt;com.dawes.DAOImpl{RecetaDAOImpl.java[RecetaDAOImpl" modifiers="1" timestamp="1573820675141"/>
-</typeInfoHistroy>
